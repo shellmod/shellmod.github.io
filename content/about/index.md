@@ -28,6 +28,7 @@ is the best way to detect it. My learning path is on the [Malware Lab](/malware-
 - Incident response & digital forensics (DFIR)
 - Detection engineering (SIEM, EDR, YARA, Sigma)
 - Threat hunting & MITRE ATT&CK mapping
+- Offensive security & CTFs
 - Purple teaming
 
 ## Journey

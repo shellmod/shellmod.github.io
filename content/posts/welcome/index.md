@@ -3,16 +3,17 @@ title: "Welcome to my blog"
 date: 2026-11-27
 draft: false
 description: "First post: what you'll find here."
-summary: "First post: an introduction to the blog and its topics — malware analysis, malware development and detection."
+summary: "First post: an introduction to the blog and its topics — malware analysis and development, threat hunting, offensive security and CTF writeups."
 tags: ["blog", "meta"]
 categories: ["Misc"]
 ---
 
 ## Why this blog?
 
-To share my passion for malware: analysis reports, malware development experiments
-(lab only, always paired with their detection), DFIR notes and writeups — from the alert in the SIEM
-to the sample that triggered it.
+To share my passion for offensive security and malware: malware analysis reports, malware
+development experiments (lab only, always paired with their detection), threat hunting notes,
+offensive security research and CTF writeups — from the alert in the SIEM to the technique that
+triggered it.
 
 ## Code block example
 

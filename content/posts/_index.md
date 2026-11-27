@@ -1,4 +1,4 @@
 ---
 title: "Posts"
-description: "Writeups, research and lessons learned in cybersecurity"
+description: "Malware, threat hunting, offensive security and CTF writeups"
 ---
