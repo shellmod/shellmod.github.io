@@ -33,7 +33,7 @@
 
       <p class="sm-typed">
         <span class="sm-prompt">&gt;</span>
-        <span id="sm-typed" data-words='["SOC Analyst L3","Purple Teamer","Threat Hunter","Detection Engineer","Incident Responder"]'>SOC Analyst L3 &amp; Purple Teamer</span><span class="sm-caret">▌</span>
+        <span id="sm-typed" data-words='["SOC Analyst L3","Purple Teamer","Malware Analyst","Malware Developer"]'>SOC Analyst L3 &amp; Purple Teamer</span><span class="sm-caret">▌</span>
       </p>
 
       {{ with $author.bio }}<p class="sm-bio">{{ . | markdownify }}</p>{{ end }}
@@ -63,10 +63,12 @@
 <span class="o">mame_birame</span>  <span class="c"># aka shellmod</span>
 <span class="p">shellmod@soc:~$</span> cat /etc/role
 <span class="o">SOC Analyst L3 · Purple Teamer</span>
-<span class="p">shellmod@soc:~$</span> ./purple --merge red blue
-<span class="r">[red]</span>  emulate the adversary
-<span class="b">[blue]</span> detect · hunt · respond
-<span class="g">[+]</span>    purple: detection gap closed
+<span class="p">shellmod@soc:~$</span> ls ~/lab
+<span class="o">samples/  sandbox/  loaders/  yara/</span>
+<span class="p">shellmod@soc:~$</span> ./analyze sample.exe
+<span class="g">[+]</span> unpacked · config extracted
+<span class="r">[+]</span> technique rebuilt <span class="c"># lab only</span>
+<span class="b">[+]</span> yara + sigma rules written
 <span class="p">shellmod@soc:~$</span> <span class="sm-caret">▌</span></pre>
     </div>
   </div>
@@ -75,8 +77,8 @@
 
 {{/* ---------- RED + BLUE = PURPLE ---------- */}}
 <section id="sm-pillars" class="sm-section">
-  <p class="sm-kicker">// red + blue = purple</p>
-  <h2 class="sm-title">What I do</h2>
+  <p class="sm-kicker">// break it · build it · detect it</p>
+  <h2 class="sm-title">What I work on</h2>
   <div class="sm-pillars">
     <article class="sm-pillar sm-blue">
       <div class="sm-pillar-icon">{{ partial "icon.html" "eye" }}</div>
@@ -84,17 +86,23 @@
       <p>L3 triage, deep-dive investigations and incident response. SIEM, EDR, log correlation and
         detection rules that actually fire.</p>
     </article>
+    <article class="sm-pillar sm-gold">
+      <div class="sm-pillar-icon">{{ partial "icon.html" "bug" }}</div>
+      <h3>Malware Analysis</h3>
+      <p>Static and dynamic analysis, sandboxing and unpacking. Extract the IOCs, understand the
+        behaviour, write the YARA rule.</p>
+    </article>
     <article class="sm-pillar sm-red">
-      <div class="sm-pillar-icon">{{ partial "icon.html" "fire" }}</div>
-      <h3>Emulate</h3>
-      <p>Adversary emulation mapped to MITRE ATT&amp;CK — run the real techniques to see what we
-        really see, and what we miss.</p>
+      <div class="sm-pillar-icon">{{ partial "icon.html" "code" }}</div>
+      <h3>Malware Development</h3>
+      <p>Rebuild loaders, injection and evasion techniques in an isolated lab — to understand them
+        from the inside and detect them better.</p>
     </article>
     <article class="sm-pillar sm-purple">
       <div class="sm-pillar-icon">{{ partial "icon.html" "shield" }}</div>
-      <h3>Improve</h3>
-      <p>Close the loop: every attack becomes a detection, every blind spot becomes a fix. Then do
-        it again.</p>
+      <h3>Purple &amp; Improve</h3>
+      <p>Close the loop: every sample and every technique becomes a detection, every blind spot
+        becomes a fix. Then do it again.</p>
     </article>
   </div>
 </section>

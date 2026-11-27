@@ -3,15 +3,16 @@ title: "Welcome to my blog"
 date: 2026-11-27
 draft: false
 description: "First post: what you'll find here."
-summary: "First post: an introduction to the blog and its topics — SOC, detection engineering, purple teaming."
+summary: "First post: an introduction to the blog and its topics — malware analysis, malware development and detection."
 tags: ["blog", "meta"]
 categories: ["Misc"]
 ---
 
 ## Why this blog?
 
-To document what I learn, share writeups and keep track of my research — from the alert in the SIEM
-to the technique that triggered it.
+To share my passion for malware: analysis reports, malware development experiments
+(lab only, always paired with their detection), DFIR notes and writeups — from the alert in the SIEM
+to the sample that triggered it.
 
 ## Code block example
 

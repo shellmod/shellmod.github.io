@@ -13,15 +13,22 @@ showAuthor: false
 
 I'm **Mame Birame**, also known as **Shellmod** — a **Level 3 SOC analyst** and **purple teamer**.
 I spend my days on the blue side (investigating, hunting, responding) and borrow the red side's
-tools to check that our detections actually hold up. *(To customize.)*
+tools to check that our detections actually hold up.
+
+## What drives me
+
+**Malware** is my passion. I love taking a sample apart to understand exactly what it does — and I
+also **write** malware techniques in an isolated lab, because understanding how something is built
+is the best way to detect it. My learning path is on the [Malware Lab](/malware-lab/) page.
 
 ## Focus areas
 
-- Incident response & deep-dive investigations
-- Detection engineering (SIEM, EDR, Sigma rules)
+- Malware analysis
+- Malware development (lab only, for detection purposes)
+- Incident response & digital forensics (DFIR)
+- Detection engineering (SIEM, EDR, YARA, Sigma)
 - Threat hunting & MITRE ATT&CK mapping
-- Adversary emulation & purple teaming
-- Active Directory attacks and their detection
+- Purple teaming
 
 ## Journey
 

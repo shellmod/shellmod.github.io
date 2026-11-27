@@ -291,7 +291,7 @@ html:not(.dark) .sm-section .sm-btn-ghost { color: rgb(var(--color-secondary-700
 
 /* pillars */
 .sm-pillars { display: grid; gap: 1.25rem; }
-@media (min-width: 768px) { .sm-pillars { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .sm-pillars { grid-template-columns: repeat(2, 1fr); } }
 .sm-pillar {
   --accent: var(--sm-purple);
   position: relative;
@@ -316,6 +316,7 @@ html:not(.dark) .sm-section .sm-btn-ghost { color: rgb(var(--color-secondary-700
 .sm-blue { --accent: var(--sm-blue); }
 .sm-red { --accent: var(--sm-red); }
 .sm-purple { --accent: var(--sm-purple); }
+.sm-gold { --accent: var(--sm-gold); }
 .sm-pillar-icon {
   display: inline-flex; font-size: 1.4rem;
   padding: .65rem; border-radius: .7rem;
