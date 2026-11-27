@@ -11,7 +11,7 @@ showAuthor: false
 Want to talk detection, purple teaming or a writeup? Here's how to reach me.
 
 - **GitHub**: [github.com/shellmod](https://github.com/shellmod)
-- **LinkedIn**: *to be completed*
+- **LinkedIn**: [Mame Birame](https://www.linkedin.com/in/mame-birame-s-95512a3a8/)
 - **Email**: *to be completed*
 
 I'm always open to technical discussions, collaborations and questions about my posts.

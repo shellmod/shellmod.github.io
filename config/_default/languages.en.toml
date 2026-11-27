@@ -20,7 +20,7 @@ title = "Shellmod"
   # Uncomment / fill in the links you want to display
   links = [
     { github = "https://github.com/shellmod" },
-    # { linkedin = "https://www.linkedin.com/in/shellmod/" },
+    { linkedin = "https://www.linkedin.com/in/mame-birame-s-95512a3a8/" },
     # { x-twitter = "https://x.com/shellmod" },
     # { email = "mailto:you@example.com" },
   ]
