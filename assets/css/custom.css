@@ -150,7 +150,6 @@ article div.flex.rounded-md {
   margin: 0 !important;
 }
 .sm-handle { margin: 0; font: 500 .95rem var(--sm-mono); color: #ece8e1; }
-.sm-handle span { color: #8c867d; }
 
 .sm-name {
   margin: 0;
