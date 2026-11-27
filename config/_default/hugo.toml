@@ -1,7 +1,7 @@
-# À remplacer par https://<ton-user-github>.github.io/
+# Site URL (GitHub Pages)
 baseURL = "https://shellmod.github.io/"
 theme = "blowfish"
-defaultContentLanguage = "fr"
+defaultContentLanguage = "en"
 
 enableRobotsTXT = true
 summaryLength = 30
@@ -23,7 +23,7 @@ enableEmoji = true
   priority = 0.5
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]   # JSON requis pour la recherche
+  home = ["HTML", "RSS", "JSON"]   # JSON required for search
 
 [related]
   threshold = 0

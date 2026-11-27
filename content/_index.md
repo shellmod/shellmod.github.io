@@ -1,7 +1,9 @@
 ---
-title: "Accueil"
+title: "Home"
 ---
 
-Bienvenue sur mon blog ! J'y publie mes **writeups CTF / HackTheBox**, mes recherches en **sécurité offensive** et mes retours d'expérience **purple team**.
+Welcome to my notebook. Here I publish **CTF / HackTheBox writeups**, **detection engineering** notes, **threat hunting** research and lessons learned from **purple team** exercises.
 
-[En savoir plus sur moi →](/about/)
+Alerts don't stop at 6 pm — neither does learning. *If you are tired, then do it tired.*
+
+[More about me →](/about/)

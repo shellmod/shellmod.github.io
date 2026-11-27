@@ -1,0 +1,142 @@
+{{/* Custom homepage — "Shellmod" terminal hero + purple team pillars + mindset + latest posts */}}
+{{ $author := .Site.Params.Author }}
+{{ $hero := resources.Get "img/hero-home.jpg" }}
+{{ $avatar := resources.Get $author.image }}
+{{ $quote1 := resources.Get "img/quote-tired.jpg" }}
+{{ $quote2 := resources.Get "img/quote-better.jpg" }}
+
+{{/* ---------- HERO ---------- */}}
+<section class="sm-bleed sm-hero">
+  {{ with $hero }}
+    <img class="sm-hero-bg nozoom" src="{{ .RelPermalink }}" alt="" role="presentation">
+  {{ end }}
+  <div class="sm-hero-overlay"></div>
+  <div class="sm-hero-grid"></div>
+
+  <div class="sm-hero-inner">
+    <div class="sm-hero-left">
+      <span class="sm-status"><span class="sm-dot"></span>on duty · SOC L3</span>
+
+      <div class="sm-identity">
+        {{ with $avatar }}
+          {{ $img := .Fill "320x320 q92" }}
+          <div class="sm-avatar-ring">
+            <img class="sm-avatar nozoom" src="{{ $img.RelPermalink }}" width="160" height="160"
+              alt="{{ $author.name }}">
+          </div>
+        {{ end }}
+        <div>
+          <h1 class="sm-name">{{ $author.name }}</h1>
+          <p class="sm-alias">aka <span>Shellmod</span></p>
+        </div>
+      </div>
+
+      <p class="sm-typed">
+        <span class="sm-prompt">&gt;</span>
+        <span id="sm-typed" data-words='["SOC Analyst L3","Purple Teamer","Threat Hunter","Detection Engineer","Incident Responder"]'>SOC Analyst L3 &amp; Purple Teamer</span><span class="sm-caret">▌</span>
+      </p>
+
+      {{ with $author.bio }}<p class="sm-bio">{{ . | markdownify }}</p>{{ end }}
+
+      <div class="sm-actions">
+        <a class="sm-btn sm-btn-primary" href="{{ "posts/" | relLangURL }}">Read the blog</a>
+        <a class="sm-btn sm-btn-ghost" href="{{ "about/" | relLangURL }}">$ whoami</a>
+        {{ with $author.links }}
+          <span class="sm-socials">
+            {{ range $links := . }}
+              {{ range $name, $url := $links }}
+                <a href="{{ $url }}" target="_blank" rel="me noopener noreferrer" aria-label="{{ $name | title }}"
+                  title="{{ $name | title }}">{{ partial "icon.html" $name }}</a>
+              {{ end }}
+            {{ end }}
+          </span>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="sm-term" aria-hidden="true">
+      <div class="sm-term-bar">
+        <span></span><span></span><span></span>
+        <em>shellmod@soc: ~</em>
+      </div>
+      <pre><span class="p">shellmod@soc:~$</span> whoami
+<span class="o">mame_birame</span>  <span class="c"># aka shellmod</span>
+<span class="p">shellmod@soc:~$</span> cat /etc/role
+<span class="o">SOC Analyst L3 · Purple Teamer</span>
+<span class="p">shellmod@soc:~$</span> ./purple --merge red blue
+<span class="r">[red]</span>  emulate the adversary
+<span class="b">[blue]</span> detect · hunt · respond
+<span class="g">[+]</span>    purple: detection gap closed
+<span class="p">shellmod@soc:~$</span> <span class="sm-caret">▌</span></pre>
+    </div>
+  </div>
+  <a class="sm-scroll" href="#sm-pillars" aria-label="Scroll down">⌄</a>
+</section>
+
+{{/* ---------- RED + BLUE = PURPLE ---------- */}}
+<section id="sm-pillars" class="sm-section">
+  <p class="sm-kicker">// red + blue = purple</p>
+  <h2 class="sm-title">What I do</h2>
+  <div class="sm-pillars">
+    <article class="sm-pillar sm-blue">
+      <div class="sm-pillar-icon">{{ partial "icon.html" "eye" }}</div>
+      <h3>Detect &amp; Respond</h3>
+      <p>L3 triage, deep-dive investigations and incident response. SIEM, EDR, log correlation and
+        detection rules that actually fire.</p>
+    </article>
+    <article class="sm-pillar sm-red">
+      <div class="sm-pillar-icon">{{ partial "icon.html" "fire" }}</div>
+      <h3>Emulate</h3>
+      <p>Adversary emulation mapped to MITRE ATT&amp;CK — run the real techniques to see what we
+        really see, and what we miss.</p>
+    </article>
+    <article class="sm-pillar sm-purple">
+      <div class="sm-pillar-icon">{{ partial "icon.html" "shield" }}</div>
+      <h3>Improve</h3>
+      <p>Close the loop: every attack becomes a detection, every blind spot becomes a fix. Then do
+        it again.</p>
+    </article>
+  </div>
+</section>
+
+{{/* ---------- MINDSET ---------- */}}
+<section class="sm-section sm-mindset">
+  <div class="sm-mindset-text">
+    <p class="sm-kicker">// mindset</p>
+    <h2 class="sm-title">Mamba mentality,<br><span>applied to security.</span></h2>
+    <div class="sm-readme">{{ .Content }}</div>
+  </div>
+  <div class="sm-mindset-imgs">
+    {{ with $quote1 }}<img class="nozoom" src="{{ (.Fill "500x500 q90").RelPermalink }}" alt="If you are tired, then do it tired." loading="lazy">{{ end }}
+    {{ with $quote2 }}<img class="nozoom" src="{{ (.Fill "415x600 q90 Top").RelPermalink }}" alt="Are you getting better every single day? That's the question." loading="lazy">{{ end }}
+  </div>
+</section>
+
+{{/* ---------- LATEST POSTS ---------- */}}
+{{ if .Site.Params.homepage.showRecent | default false }}
+  <section class="sm-section">
+    <p class="sm-kicker">// tail -f /var/log/blog</p>
+    <h2 class="sm-title">Latest posts</h2>
+    {{ partial "recent-articles/cardview.html" . }}
+    <div class="sm-more">
+      <a class="sm-btn sm-btn-ghost" href="{{ .Site.Params.homepage.showMoreLinkDest | default "posts" | relLangURL }}">ls ~/posts →</a>
+    </div>
+  </section>
+{{ end }}
+
+<script>
+  (function () {
+    var el = document.getElementById("sm-typed");
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var words = JSON.parse(el.dataset.words), w = 0, i = 0, del = false;
+    el.textContent = "";
+    (function tick() {
+      var word = words[w];
+      el.textContent = word.slice(0, i);
+      if (!del && i < word.length) { i++; return setTimeout(tick, 70); }
+      if (!del) { del = true; return setTimeout(tick, 1600); }
+      if (i > 0) { i--; return setTimeout(tick, 35); }
+      del = false; w = (w + 1) % words.length; setTimeout(tick, 300);
+    })();
+  })();
+</script>

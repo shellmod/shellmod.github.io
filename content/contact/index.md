@@ -5,12 +5,13 @@ showReadingTime: false
 showTableOfContents: false
 showRelatedContent: false
 showPagination: false
+showAuthor: false
 ---
 
-Envie d'échanger ? Voici comment me joindre.
+Want to talk detection, purple teaming or a writeup? Here's how to reach me.
 
-- **GitHub** : [github.com/shellmod](https://github.com/shellmod)
-- **LinkedIn** : *à compléter*
-- **Email** : *à compléter*
+- **GitHub**: [github.com/shellmod](https://github.com/shellmod)
+- **LinkedIn**: *to be completed*
+- **Email**: *to be completed*
 
-Je suis ouvert(e) aux discussions techniques, collaborations et questions sur mes articles.
+I'm always open to technical discussions, collaborations and questions about my posts.

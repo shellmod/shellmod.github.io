@@ -1,20 +1,20 @@
 [[main]]
-  name = "Accueil"
+  name = "~/home"
   pageRef = "/"
   weight = 10
 
 [[main]]
-  name = "Articles"
+  name = "~/posts"
   pageRef = "posts"
   weight = 20
 
 [[main]]
-  name = "À propos"
+  name = "~/whoami"
   pageRef = "about"
   weight = 30
 
 [[main]]
-  name = "Contact"
+  name = "~/contact"
   pageRef = "contact"
   weight = 40
 
@@ -30,6 +30,11 @@
   weight = 10
 
 [[footer]]
-  name = "Articles"
+  name = "Posts"
   pageRef = "posts"
   weight = 20
+
+[[footer]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 30

@@ -1,4 +1,4 @@
 ---
-title: "Articles"
-description: "Writeups, recherches et retours d'expérience en cybersécurité"
+title: "Posts"
+description: "Writeups, research and lessons learned in cybersecurity"
 ---
