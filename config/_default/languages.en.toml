@@ -9,14 +9,14 @@ title = "Shellmod"
   rtl = false
   dateFormat = "January 2, 2006"
   logo = ""
-  copyright = "© { year } Mame Birame · Shellmod — stay curious, stay purple."
-  description = "Shellmod's notebook — malware analysis and development, threat hunting, offensive security and CTF writeups."
+  copyright = "© { year } Mame Birame · Shellmod. Stay curious, stay purple."
+  description = "Shellmod's notebook: malware analysis and development, threat hunting, offensive security and CTF writeups."
 
 [params.author]
   name = "Mame Birame"
   image = "img/profile.jpg"
   headline = "SOC Analyst L3 & Purple Teamer · Malware enthusiast"
-  bio = "Mame Birame, aka **Shellmod** — L3 SOC analyst and purple teamer. I defend for a living, and I'm driven by a passion for offensive security and malware — understanding the attack is how I get better at stopping it. Getting better every single day."
+  bio = "Mame Birame, aka **Shellmod**, L3 SOC analyst and purple teamer. I love the defensive side (investigating, hunting and building detections) and I'm just as passionate about offensive security and malware. Knowing both sides is what makes each one sharper. Getting better every single day."
   # Uncomment / fill in the links you want to display
   links = [
     { github = "https://github.com/shellmod" },

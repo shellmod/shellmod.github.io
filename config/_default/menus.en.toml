@@ -9,11 +9,6 @@
   weight = 20
 
 [[main]]
-  name = "~/malware-lab"
-  pageRef = "malware-lab"
-  weight = 25
-
-[[main]]
   name = "~/whoami"
   pageRef = "about"
   weight = 30

@@ -7,6 +7,6 @@ and **malware**. This is where I publish **malware analysis** reports, **malware
 experiments (lab only, always paired with their detection), **threat hunting** notes,
 **offensive security** research and **CTF writeups**.
 
-Alerts don't stop at 6 pm — neither does learning. *If you are tired, then do it tired.*
+Alerts don't stop at 6 pm, and neither does learning. *If you are tired, then do it tired.*
 
-[Explore the malware lab →](/malware-lab/)
+[More about me →](/about/)
