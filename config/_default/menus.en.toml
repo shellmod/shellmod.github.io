@@ -30,6 +30,12 @@
   url = "https://www.linkedin.com/in/mame-birame-s-95512a3a8/"
   weight = 210
 
+[[main]]
+  identifier = "root-me"
+  pre = "root-me"
+  url = "https://www.root-me.org/shellmod"
+  weight = 220
+
 [[footer]]
   name = "Tags"
   pageRef = "tags"
