@@ -1,37 +1,37 @@
-/* Mamba scheme — purple (purple team) + gold, on a near-black violet-tinted base */
+/* Mamba scheme — warm graphite base, a single gold accent, muted violet for small details */
 :root {
   --color-neutral: 255, 255, 255;
-  /* Violet-tinted gray */
-  --color-neutral-50: 250, 249, 252;
-  --color-neutral-100: 243, 241, 247;
-  --color-neutral-200: 228, 225, 236;
-  --color-neutral-300: 200, 196, 214;
-  --color-neutral-400: 152, 146, 171;
-  --color-neutral-500: 107, 101, 128;
-  --color-neutral-600: 75, 70, 94;
-  --color-neutral-700: 44, 40, 60;
-  --color-neutral-800: 20, 17, 30;
-  --color-neutral-900: 11, 9, 17;
-  /* Purple */
-  --color-primary-50: 245, 243, 255;
-  --color-primary-100: 237, 233, 254;
-  --color-primary-200: 221, 214, 254;
-  --color-primary-300: 196, 181, 253;
-  --color-primary-400: 167, 139, 250;
-  --color-primary-500: 139, 92, 246;
-  --color-primary-600: 124, 58, 237;
-  --color-primary-700: 109, 40, 217;
-  --color-primary-800: 91, 33, 182;
-  --color-primary-900: 76, 29, 149;
-  /* Gold */
-  --color-secondary-50: 255, 251, 235;
-  --color-secondary-100: 254, 243, 199;
-  --color-secondary-200: 253, 230, 138;
-  --color-secondary-300: 252, 211, 77;
-  --color-secondary-400: 253, 185, 39;
-  --color-secondary-500: 245, 158, 11;
-  --color-secondary-600: 217, 119, 6;
-  --color-secondary-700: 180, 83, 9;
-  --color-secondary-800: 146, 64, 14;
-  --color-secondary-900: 120, 53, 15;
+  /* Warm graphite */
+  --color-neutral-50: 250, 249, 247;
+  --color-neutral-100: 243, 241, 238;
+  --color-neutral-200: 228, 225, 220;
+  --color-neutral-300: 205, 200, 193;
+  --color-neutral-400: 160, 154, 146;
+  --color-neutral-500: 118, 112, 105;
+  --color-neutral-600: 84, 80, 75;
+  --color-neutral-700: 52, 50, 47;
+  --color-neutral-800: 23, 22, 21;
+  --color-neutral-900: 14, 13, 12;
+  /* Gold (accent) */
+  --color-primary-50: 253, 249, 237;
+  --color-primary-100: 250, 240, 205;
+  --color-primary-200: 244, 223, 152;
+  --color-primary-300: 236, 202, 100;
+  --color-primary-400: 226, 179, 64;
+  --color-primary-500: 205, 155, 40;
+  --color-primary-600: 168, 124, 28;
+  --color-primary-700: 132, 96, 24;
+  --color-primary-800: 104, 76, 24;
+  --color-primary-900: 84, 62, 22;
+  /* Muted violet (details only) */
+  --color-secondary-50: 246, 244, 250;
+  --color-secondary-100: 236, 232, 245;
+  --color-secondary-200: 218, 210, 236;
+  --color-secondary-300: 191, 178, 222;
+  --color-secondary-400: 160, 143, 204;
+  --color-secondary-500: 132, 113, 182;
+  --color-secondary-600: 108, 91, 158;
+  --color-secondary-700: 88, 74, 130;
+  --color-secondary-800: 70, 60, 103;
+  --color-secondary-900: 56, 48, 82;
 }

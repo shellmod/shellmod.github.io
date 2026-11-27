@@ -1,4 +1,4 @@
-{{/* Custom homepage — "Shellmod" terminal hero + purple team pillars + mindset + latest posts */}}
+{{/* Custom homepage — Shellmod */}}
 {{ $author := .Site.Params.Author }}
 {{ $hero := resources.Get "img/hero-home.jpg" }}
 {{ $avatar := resources.Get $author.image }}
@@ -10,37 +10,26 @@
   {{ with $hero }}
     <img class="sm-hero-bg nozoom" src="{{ .RelPermalink }}" alt="" role="presentation">
   {{ end }}
-  <div class="sm-hero-overlay"></div>
-  <div class="sm-hero-grid"></div>
+  <div class="sm-hero-shade"></div>
 
   <div class="sm-hero-inner">
-    <div class="sm-hero-left">
-      <span class="sm-status"><span class="sm-dot"></span>on duty · SOC L3</span>
-
+    <div class="sm-hero-main">
       <div class="sm-identity">
         {{ with $avatar }}
-          {{ $img := .Fill "320x320 q92" }}
-          <div class="sm-avatar-ring">
-            <img class="sm-avatar nozoom" src="{{ $img.RelPermalink }}" width="160" height="160"
-              alt="{{ $author.name }}">
-          </div>
+          {{ $img := .Fill "240x240 q92" }}
+          <img class="sm-avatar nozoom" src="{{ $img.RelPermalink }}" width="88" height="88" alt="{{ $author.name }}">
         {{ end }}
-        <div>
-          <h1 class="sm-name">{{ $author.name }}</h1>
-          <p class="sm-alias">aka <span>Shellmod</span></p>
-        </div>
+        <p class="sm-handle">shellmod<span>@soc</span></p>
       </div>
 
-      <p class="sm-typed">
-        <span class="sm-prompt">&gt;</span>
-        <span id="sm-typed" data-words='["SOC Analyst L3","Purple Teamer","Malware Analyst","Malware Developer"]'>SOC Analyst L3 &amp; Purple Teamer</span><span class="sm-caret">▌</span>
-      </p>
+      <h1 class="sm-name">{{ $author.name }}</h1>
+      <p class="sm-role">SOC Analyst L3 <i>/</i> Purple Teamer <i>/</i> Malware analysis &amp; development</p>
 
       {{ with $author.bio }}<p class="sm-bio">{{ . | markdownify }}</p>{{ end }}
 
       <div class="sm-actions">
-        <a class="sm-btn sm-btn-primary" href="{{ "posts/" | relLangURL }}">Read the blog</a>
-        <a class="sm-btn sm-btn-ghost" href="{{ "about/" | relLangURL }}">$ whoami</a>
+        <a class="sm-btn" href="{{ "posts/" | relLangURL }}">Read the posts</a>
+        <a class="sm-link" href="{{ "malware-lab/" | relLangURL }}">Malware lab →</a>
         {{ with $author.links }}
           <span class="sm-socials">
             {{ range $links := . }}
@@ -54,97 +43,75 @@
       </div>
     </div>
 
-    <div class="sm-term" aria-hidden="true">
-      <div class="sm-term-bar">
-        <span></span><span></span><span></span>
-        <em>shellmod@soc: ~</em>
-      </div>
-      <pre><span class="p">shellmod@soc:~$</span> whoami
-<span class="o">mame_birame</span>  <span class="c"># aka shellmod</span>
-<span class="p">shellmod@soc:~$</span> cat /etc/role
-<span class="o">SOC Analyst L3 · Purple Teamer</span>
-<span class="p">shellmod@soc:~$</span> ls ~/lab
-<span class="o">samples/  sandbox/  loaders/  yara/</span>
-<span class="p">shellmod@soc:~$</span> ./analyze sample.exe
-<span class="g">[+]</span> unpacked · config extracted
-<span class="r">[+]</span> technique rebuilt <span class="c"># lab only</span>
-<span class="b">[+]</span> yara + sigma rules written
-<span class="p">shellmod@soc:~$</span> <span class="sm-caret">▌</span></pre>
-    </div>
+    <figure class="sm-term" aria-hidden="true">
+      <figcaption>~/lab</figcaption>
+      <pre><span class="p">$</span> ls
+samples/  sandbox/  loaders/  rules/
+<span class="p">$</span> ./analyze samples/invoice.exe
+<span class="k">packer</span>     UPX 3.96  <span class="c">→ unpacked</span>
+<span class="k">imports</span>    VirtualAlloc, CreateRemoteThread
+<span class="k">network</span>    POST /gate.php  <span class="c">every 60s</span>
+<span class="k">att&amp;ck</span>     T1055 · T1071.001
+<span class="k">output</span>     rules/invoice.yar  rules/invoice.yml
+<span class="p">$</span> <span class="sm-caret">_</span></pre>
+    </figure>
   </div>
-  <a class="sm-scroll" href="#sm-pillars" aria-label="Scroll down">⌄</a>
 </section>
 
-{{/* ---------- RED + BLUE = PURPLE ---------- */}}
-<section id="sm-pillars" class="sm-section">
-  <p class="sm-kicker">// break it · build it · detect it</p>
-  <h2 class="sm-title">What I work on</h2>
-  <div class="sm-pillars">
-    <article class="sm-pillar sm-blue">
-      <div class="sm-pillar-icon">{{ partial "icon.html" "eye" }}</div>
-      <h3>Detect &amp; Respond</h3>
-      <p>L3 triage, deep-dive investigations and incident response. SIEM, EDR, log correlation and
-        detection rules that actually fire.</p>
-    </article>
-    <article class="sm-pillar sm-gold">
-      <div class="sm-pillar-icon">{{ partial "icon.html" "bug" }}</div>
-      <h3>Malware Analysis</h3>
-      <p>Static and dynamic analysis, sandboxing and unpacking. Extract the IOCs, understand the
+{{/* ---------- FOCUS ---------- */}}
+<section class="sm-section">
+  <header class="sm-head"><span>01</span><h2>Focus</h2></header>
+  <ol class="sm-focus">
+    <li>
+      <h3>Detect &amp; respond</h3>
+      <p>L3 triage, investigations and incident response. SIEM, EDR, log correlation, and detection
+        rules that actually fire.</p>
+    </li>
+    <li>
+      <h3>Malware analysis</h3>
+      <p>Static and dynamic analysis, sandboxing and unpacking. Pull out the IOCs, understand the
         behaviour, write the YARA rule.</p>
-    </article>
-    <article class="sm-pillar sm-red">
-      <div class="sm-pillar-icon">{{ partial "icon.html" "code" }}</div>
-      <h3>Malware Development</h3>
-      <p>Rebuild loaders, injection and evasion techniques in an isolated lab — to understand them
+    </li>
+    <li>
+      <h3>Malware development</h3>
+      <p>Loaders, injection and evasion techniques, rebuilt in an isolated lab — to understand them
         from the inside and detect them better.</p>
-    </article>
-    <article class="sm-pillar sm-purple">
-      <div class="sm-pillar-icon">{{ partial "icon.html" "shield" }}</div>
-      <h3>Purple &amp; Improve</h3>
-      <p>Close the loop: every sample and every technique becomes a detection, every blind spot
-        becomes a fix. Then do it again.</p>
-    </article>
-  </div>
+    </li>
+    <li>
+      <h3>Purple teaming</h3>
+      <p>Close the loop: every sample and every technique becomes a detection, every blind spot a
+        fix. Then run it again.</p>
+    </li>
+  </ol>
 </section>
 
 {{/* ---------- MINDSET ---------- */}}
-<section class="sm-section sm-mindset">
-  <div class="sm-mindset-text">
-    <p class="sm-kicker">// mindset</p>
-    <h2 class="sm-title">Mamba mentality,<br><span>applied to security.</span></h2>
+<section class="sm-section">
+  <header class="sm-head"><span>02</span><h2>Mindset</h2></header>
+  <div class="sm-mindset">
     <div class="sm-readme">{{ .Content }}</div>
-  </div>
-  <div class="sm-mindset-imgs">
-    {{ with $quote1 }}<img class="nozoom" src="{{ (.Fill "500x500 q90").RelPermalink }}" alt="If you are tired, then do it tired." loading="lazy">{{ end }}
-    {{ with $quote2 }}<img class="nozoom" src="{{ (.Fill "415x600 q90 Top").RelPermalink }}" alt="Are you getting better every single day? That's the question." loading="lazy">{{ end }}
+    <div class="sm-quotes">
+      {{ with $quote1 }}
+        <figure>
+          <img class="nozoom" src="{{ (.Fill "480x552 q90 Center").RelPermalink }}" alt="If you are tired, then do it tired." loading="lazy">
+        </figure>
+      {{ end }}
+      {{ with $quote2 }}
+        <figure>
+          <img class="nozoom" src="{{ (.Fill "415x477 q90 Center").RelPermalink }}" alt="Are you getting better every single day? That's the question." loading="lazy">
+        </figure>
+      {{ end }}
+    </div>
   </div>
 </section>
 
 {{/* ---------- LATEST POSTS ---------- */}}
 {{ if .Site.Params.homepage.showRecent | default false }}
   <section class="sm-section">
-    <p class="sm-kicker">// tail -f /var/log/blog</p>
-    <h2 class="sm-title">Latest posts</h2>
+    <header class="sm-head">
+      <span>03</span><h2>Latest posts</h2>
+      <a class="sm-link" href="{{ .Site.Params.homepage.showMoreLinkDest | default "posts" | relLangURL }}">All posts →</a>
+    </header>
     {{ partial "recent-articles/cardview.html" . }}
-    <div class="sm-more">
-      <a class="sm-btn sm-btn-ghost" href="{{ .Site.Params.homepage.showMoreLinkDest | default "posts" | relLangURL }}">ls ~/posts →</a>
-    </div>
   </section>
 {{ end }}
-
-<script>
-  (function () {
-    var el = document.getElementById("sm-typed");
-    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var words = JSON.parse(el.dataset.words), w = 0, i = 0, del = false;
-    el.textContent = "";
-    (function tick() {
-      var word = words[w];
-      el.textContent = word.slice(0, i);
-      if (!del && i < word.length) { i++; return setTimeout(tick, 70); }
-      if (!del) { del = true; return setTimeout(tick, 1600); }
-      if (i > 0) { i--; return setTimeout(tick, 35); }
-      del = false; w = (w + 1) % words.length; setTimeout(tick, 300);
-    })();
-  })();
-</script>
